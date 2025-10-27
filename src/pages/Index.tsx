@@ -36,26 +36,29 @@ const Index = () => {
         <div className="absolute inset-0 backdrop-blur-3xl opacity-50" />
         
         <div className="relative z-10 text-center max-w-4xl mx-auto animate-fade-in">
-          <div className="mb-8 inline-block glow-effect rounded-full p-4">
-            <Heart className="w-16 h-16 text-primary animate-pulse" fill="currentColor" />
+          <div className="mb-12 relative">
+            <div className="absolute inset-0 animate-ping opacity-20">
+              <Heart className="w-32 h-32 text-primary mx-auto" fill="currentColor" />
+            </div>
+            <Heart className="w-32 h-32 text-primary animate-pulse mx-auto relative z-10" fill="currentColor" />
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-foreground">
-            Тамик
+          <h1 className="text-7xl md:text-9xl font-bold mb-8 text-foreground tracking-tight">
+            Мы💕
           </h1>
           
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary animate-pulse"></div>
-            <Heart className="w-8 h-8 text-primary animate-pulse" fill="currentColor" />
-            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary animate-pulse"></div>
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+            <Sparkles className="w-6 h-6 text-primary animate-pulse" />
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground">
-            Милана
-          </h1>
+          <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light mb-4">
+            Тамик & Милана
+          </p>
           
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light">
-            История двух сердец, бьющихся в унисон
+          <p className="text-lg md:text-xl text-muted-foreground/80 leading-relaxed max-w-2xl mx-auto font-light italic">
+            Наша история любви, написанная сердцем
           </p>
           
           <div className="mt-8">
