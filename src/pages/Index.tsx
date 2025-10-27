@@ -1,5 +1,9 @@
 import { Heart, Clock, Camera, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { FloatingHearts } from "@/components/FloatingHearts";
+import { DaysCounter } from "@/components/DaysCounter";
+import { SecretMessage } from "@/components/SecretMessage";
+import { StarryBackground } from "@/components/StarryBackground";
 
 const Index = () => {
   const moments = [
@@ -21,16 +25,19 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
+      <StarryBackground />
+      <FloatingHearts />
+      
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
         
         <div className="relative z-10 text-center max-w-4xl mx-auto animate-fade-in">
-          <div className="mb-8 inline-block">
+          <div className="mb-8 inline-block glow-effect rounded-full p-4">
             <Heart className="w-16 h-16 text-primary animate-pulse" fill="currentColor" />
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground text-glow">
             Наша история
           </h1>
           
@@ -39,21 +46,25 @@ const Index = () => {
           </p>
           
           <div className="mt-8">
-            <Sparkles className="w-8 h-8 text-primary mx-auto" />
+            <Sparkles className="w-8 h-8 text-primary mx-auto animate-pulse" />
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-12 animate-slide-up">
             <Clock className="w-8 h-8 text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold">С самого начала</h2>
           </div>
           
-          <Card className="bg-card border-border p-8 md:p-12 mb-8 hover:border-primary/50 transition-all duration-300 animate-slide-up">
+          <div className="mb-12">
+            <DaysCounter />
+          </div>
+          
+          <Card className="bg-card border-border p-8 md:p-12 mb-8 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              Всё началось с <span className="text-primary font-semibold">14 февраля 2024</span> — и с тех пор каждый день стал особенным.
+              Всё началось с <span className="text-primary font-semibold">26 марта 2025</span> — и с тех пор каждый день стал особенным.
             </p>
             <p className="text-lg md:text-xl text-foreground leading-relaxed italic">
               Кто бы знал, что случайная встреча приведёт к чему-то такому настоящему 💞
@@ -64,13 +75,13 @@ const Index = () => {
             {moments.map((moment, index) => (
               <Card 
                 key={index}
-                className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 cursor-pointer"
+                className="group overflow-hidden bg-card border-border hover:border-primary/50 hover:glow-effect transition-all duration-300 cursor-pointer"
               >
                 <div className="aspect-square overflow-hidden">
                   <img 
                     src={moment.image}
                     alt={moment.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 animate-parallax"
                   />
                 </div>
               </Card>
@@ -79,14 +90,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-secondary/30">
+      <section className="py-20 px-4 bg-secondary/30 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-12 animate-slide-up">
             <Camera className="w-8 h-8 text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold">Наши моменты</h2>
           </div>
           
-          <Card className="bg-card border-border p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up">
+          <Card className="bg-card border-border p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               Эти фото — как кадры из нашего фильма.
             </p>
@@ -99,13 +110,13 @@ const Index = () => {
             {[moments[0], moments[1]].map((moment, index) => (
               <Card 
                 key={index}
-                className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300"
+                className="group overflow-hidden bg-card border-border hover:border-primary/50 hover:glow-effect transition-all duration-300"
               >
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={moment.image}
                     alt={moment.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 animate-parallax"
                   />
                 </div>
                 <div className="p-6">
@@ -118,14 +129,20 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <SecretMessage />
+        </div>
+      </section>
+
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in">
-            <Sparkles className="w-12 h-12 text-primary mx-auto mb-6" />
+            <Sparkles className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Спасибо тебе</h2>
           </div>
           
-          <Card className="bg-card border-border p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up">
+          <Card className="bg-card border-border p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
             <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-6">
               Спасибо, что ты рядом.
             </p>
@@ -141,12 +158,12 @@ const Index = () => {
             {moments.map((moment, index) => (
               <div 
                 key={index}
-                className="group aspect-square overflow-hidden rounded-lg border border-border hover:border-primary/50 transition-all duration-300"
+                className="group aspect-square overflow-hidden rounded-lg border border-border hover:border-primary/50 hover:glow-effect transition-all duration-300"
               >
                 <img 
                   src={moment.image}
                   alt={`Момент ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale hover:grayscale-0 animate-parallax"
                 />
               </div>
             ))}
@@ -154,11 +171,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-t from-primary/10 to-background">
+      <section className="py-20 px-4 bg-gradient-to-t from-primary/10 to-background relative z-10">
         <div className="max-w-2xl mx-auto text-center animate-fade-in">
-          <Heart className="w-12 h-12 text-primary mx-auto mb-8 animate-pulse" fill="currentColor" />
+          <div className="glow-effect rounded-full p-4 inline-block mb-8">
+            <Heart className="w-12 h-12 text-primary animate-pulse" fill="currentColor" />
+          </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">Продолжение следует...</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-glow">Продолжение следует...</h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-6">
             Я хочу, чтобы таких моментов было ещё тысячи.
