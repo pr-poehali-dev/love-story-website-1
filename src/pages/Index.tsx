@@ -30,7 +30,10 @@ const Index = () => {
       <FloatingHearts />
       
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/10 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,105,180,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(138,43,226,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 backdrop-blur-3xl opacity-50" />
         
         <div className="relative z-10 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="mb-8 inline-block glow-effect rounded-full p-4">
