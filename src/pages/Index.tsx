@@ -37,12 +37,22 @@ const Index = () => {
             <Heart className="w-16 h-16 text-primary animate-pulse" fill="currentColor" />
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground text-glow">
-            Наша история
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-foreground">
+            Тамик
+          </h1>
+          
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary animate-pulse"></div>
+            <Heart className="w-8 h-8 text-primary animate-pulse" fill="currentColor" />
+            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary animate-pulse"></div>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground">
+            Милана
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light">
-            Это не просто фотографии. Это моменты, в которых живёт наше счастье
+            История двух сердец, бьющихся в унисон
           </p>
           
           <div className="mt-8">
