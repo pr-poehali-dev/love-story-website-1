@@ -103,8 +103,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-secondary/30 relative z-10">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-20 px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-rose-500/10 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,105,180,0.2),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,20,147,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 backdrop-blur-3xl opacity-50" />
+        <div className="max-w-4xl mx-auto relative z-10">
           <div className="flex items-center gap-4 mb-12 animate-slide-up">
             <Camera className="w-8 h-8 text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold">Наши моменты</h2>
@@ -143,13 +147,21 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-rose-500/10 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,105,180,0.2),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,20,147,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 backdrop-blur-3xl opacity-50" />
+        <div className="max-w-4xl mx-auto relative z-10">
           <SecretMessage />
         </div>
       </section>
 
       <section className="py-20 px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-rose-500/10 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,105,180,0.2),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,20,147,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 backdrop-blur-3xl opacity-50" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="mb-8 animate-fade-in">
             <Sparkles className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Спасибо тебе</h2>
