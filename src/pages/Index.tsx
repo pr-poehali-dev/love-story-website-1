@@ -44,7 +44,7 @@ const Index = () => {
           </div>
           
           <h1 className="text-7xl md:text-9xl font-bold mb-8 text-foreground tracking-tight flex items-center justify-center gap-4">
-            <span>Мы</span>
+            <span>Мы❤️</span>
             <span className="text-8xl md:text-[10rem]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif' }}></span>
           </h1>
           
