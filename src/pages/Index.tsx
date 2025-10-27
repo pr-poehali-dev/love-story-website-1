@@ -4,6 +4,7 @@ import { FloatingHearts } from "@/components/FloatingHearts";
 import { DaysCounter } from "@/components/DaysCounter";
 import { SecretMessage } from "@/components/SecretMessage";
 import { StarryBackground } from "@/components/StarryBackground";
+import { EyesSection } from "@/components/EyesSection";
 
 const Index = () => {
   const moments = [
@@ -134,6 +135,8 @@ const Index = () => {
           <SecretMessage />
         </div>
       </section>
+
+      <EyesSection />
 
       <section className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
