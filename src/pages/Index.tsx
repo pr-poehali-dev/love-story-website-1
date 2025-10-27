@@ -54,7 +54,7 @@ const Index = () => {
             <Sparkles className="w-6 h-6 text-primary animate-pulse" />
           </div>
           
-          <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-4" style={{ fontFamily: "'Great Vibes', cursive" }}>Т  & М</p>
+          <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light mb-4">Т & М</p>
           
           <p className="text-lg md:text-xl text-muted-foreground/80 leading-relaxed max-w-2xl mx-auto italic font-light">Наша любовь, написанная сердцем</p>
           
