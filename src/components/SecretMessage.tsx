@@ -29,17 +29,17 @@ export const SecretMessage = () => {
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
             Моей любимой
           </h3>
-          <div className="space-y-6 text-lg md:text-xl leading-relaxed">
-            <p className="text-foreground italic">
+          <div className="space-y-6 text-lg md:text-xl leading-relaxed" style={{ fontFamily: "'Great Vibes', cursive" }}>
+            <p className="text-foreground text-2xl md:text-3xl">
               "Ты знаешь, бывают люди, после встречи с которыми мир становится другим..."
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-xl md:text-2xl">
               Ты именно такой человек. С тобой я чувствую себя как дома — в любом месте, в любое время.
             </p>
-            <p className="text-foreground">
+            <p className="text-foreground text-xl md:text-2xl">
               Спасибо, что ты есть. Спасибо за каждый день, за каждую улыбку, за каждый момент рядом.
             </p>
-            <p className="text-2xl md:text-3xl text-primary font-bold mt-8">
+            <p className="text-3xl md:text-4xl text-primary mt-8">
               Я люблю тебя ❤️
             </p>
           </div>
