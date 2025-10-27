@@ -75,7 +75,7 @@ const Index = () => {
             <DaysCounter />
           </div>
           
-          <Card className="bg-card border-border p-8 md:p-12 mb-8 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
+          <Card className="bg-transparent border-border/30 p-8 md:p-12 mb-8 hover:border-primary/50 transition-all duration-300 animate-slide-up backdrop-blur-sm">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               Всё началось с <span className="text-primary font-semibold">26 марта 2025</span> — и с тех пор каждый день стал особенным.
             </p>
@@ -104,10 +104,6 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4 relative z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-rose-500/10 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,105,180,0.2),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,20,147,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 backdrop-blur-3xl opacity-50" />
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="flex items-center gap-4 mb-12 animate-slide-up">
             <Camera className="w-8 h-8 text-primary" />
@@ -127,7 +123,7 @@ const Index = () => {
             {[moments[0], moments[1]].map((moment, index) => (
               <Card 
                 key={index}
-                className="group overflow-hidden bg-card border-border hover:border-primary/50 hover:glow-effect transition-all duration-300"
+                className="group overflow-hidden bg-transparent border-border/30 hover:border-primary/50 transition-all duration-300"
               >
                 <div className="aspect-video overflow-hidden">
                   <img 
@@ -136,7 +132,7 @@ const Index = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 animate-parallax"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 bg-black/30 backdrop-blur-sm">
                   <h3 className="text-2xl font-bold mb-2">{moment.title}</h3>
                   <p className="text-muted-foreground">{moment.description}</p>
                 </div>
@@ -159,7 +155,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Спасибо тебе</h2>
           </div>
           
-          <Card className="bg-card border-border p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
+          <Card className="bg-transparent border-border/30 p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up backdrop-blur-sm">
             <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-6">
               Спасибо, что ты рядом.
             </p>
@@ -175,7 +171,7 @@ const Index = () => {
             {moments.map((moment, index) => (
               <div 
                 key={index}
-                className="group aspect-square overflow-hidden rounded-lg border border-border hover:border-primary/50 hover:glow-effect transition-all duration-300"
+                className="group aspect-square overflow-hidden rounded-lg border border-border/30 hover:border-primary/50 transition-all duration-300"
               >
                 <img 
                   src={moment.image}
@@ -188,7 +184,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-t from-primary/10 to-background relative z-10">
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-2xl mx-auto text-center animate-fade-in">
           <div className="glow-effect rounded-full p-4 inline-block mb-8">
             <Heart className="w-12 h-12 text-primary animate-pulse" fill="currentColor" />
