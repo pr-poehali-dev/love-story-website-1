@@ -1,4 +1,4 @@
-import { Heart, Camera, Sparkles, Video } from "lucide-react";
+import { Heart, Camera, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { FloatingHearts } from "@/components/FloatingHearts";
 import { DaysCounter } from "@/components/DaysCounter";
@@ -9,28 +9,29 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 const Index = () => {
   const moments = [
     {
+      type: "image",
       image: "https://cdn.poehali.dev/projects/94baf9c3-5830-4413-aedd-3bf0178de4c8/files/e7bebf29-d381-4466-8f16-e00a6482222f.jpg",
       title: "Первая встреча",
       description: "Момент, который изменил всё"
     },
     {
+      type: "image",
       image: "https://cdn.poehali.dev/projects/94baf9c3-5830-4413-aedd-3bf0178de4c8/files/ca9a68cf-ff24-4b79-994d-7160f20a9b00.jpg",
       title: "Наш смех",
       description: "Когда счастье не спрятать"
     },
     {
+      type: "video",
+      video: "",
+      poster: "",
+      title: "Наше видео",
+      description: "Особенный момент"
+    },
+    {
+      type: "image",
       image: "https://cdn.poehali.dev/projects/94baf9c3-5830-4413-aedd-3bf0178de4c8/files/f5ca2810-c46b-4987-bafa-61d7b7895a6e.jpg",
       title: "Вечер вдвоём",
       description: "Время только для нас"
-    }
-  ];
-
-  const videos = [
-    {
-      src: "",
-      title: "Наше видео",
-      description: "Особенный момент",
-      poster: ""
     }
   ];
 
@@ -119,7 +120,7 @@ const Index = () => {
           
           <Card className="bg-card border-border p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              Эти фото — как кадры из нашего фильма.
+              Фото и видео — как кадры из нашего фильма.
             </p>
             <p className="text-lg md:text-xl text-foreground leading-relaxed">
               Иногда весёлые, иногда милые, иногда просто тихие, но всегда — <span className="text-primary font-semibold">наши</span>.
@@ -127,22 +128,35 @@ const Index = () => {
           </Card>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 animate-slide-up">
-            {[moments[0], moments[1]].map((moment, index) => (
+            {moments.map((moment, index) => (
               <Card 
                 key={index}
                 className="group overflow-hidden bg-transparent border-border/30 hover:border-primary/50 transition-all duration-300"
               >
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={moment.image}
-                    alt={moment.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 animate-parallax"
-                  />
-                </div>
-                <div className="p-6 bg-black/30 backdrop-blur-sm">
-                  <h3 className="text-2xl font-bold mb-2">{moment.title}</h3>
-                  <p className="text-muted-foreground">{moment.description}</p>
-                </div>
+                {moment.type === "image" ? (
+                  <>
+                    <div className="aspect-video overflow-hidden">
+                      <img 
+                        src={moment.image}
+                        alt={moment.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 animate-parallax"
+                      />
+                    </div>
+                    <div className="p-6 bg-black/30 backdrop-blur-sm">
+                      <h3 className="text-2xl font-bold mb-2">{moment.title}</h3>
+                      <p className="text-muted-foreground">{moment.description}</p>
+                    </div>
+                  </>
+                ) : (
+                  <div className="p-6">
+                    <VideoPlayer 
+                      src={moment.video || ""}
+                      title={moment.title}
+                      description={moment.description}
+                      poster={moment.poster}
+                    />
+                  </div>
+                )}
               </Card>
             ))}
           </div>
@@ -152,37 +166,6 @@ const Index = () => {
       <section className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto relative z-10">
           <SecretMessage />
-        </div>
-      </section>
-
-      <section className="py-20 px-4 relative z-10">
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="flex items-center gap-4 mb-12 animate-slide-up">
-            <Video className="w-8 h-8 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-bold">Наши видео</h2>
-          </div>
-          
-          <Card className="bg-card border-border p-8 md:p-12 mb-8 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Живые моменты, которые невозможно передать в фото 🎬
-            </p>
-          </Card>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up">
-            {videos.map((video, index) => (
-              <Card 
-                key={index}
-                className="overflow-hidden bg-transparent border-border/30 hover:border-primary/50 transition-all duration-300"
-              >
-                <VideoPlayer 
-                  src={video.src}
-                  title={video.title}
-                  description={video.description}
-                  poster={video.poster}
-                />
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
