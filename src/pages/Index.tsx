@@ -150,7 +150,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="mb-8 animate-fade-in">
             <Sparkles className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Спасибо тебе</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8"></h2>
           </div>
           
           <Card className="bg-transparent border-border/30 p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up backdrop-blur-sm">
