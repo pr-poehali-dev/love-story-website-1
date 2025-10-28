@@ -1,4 +1,4 @@
-import { Heart, Clock, Camera, Sparkles } from "lucide-react";
+import { Heart, Camera, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { FloatingHearts } from "@/components/FloatingHearts";
 import { DaysCounter } from "@/components/DaysCounter";
@@ -66,8 +66,7 @@ const Index = () => {
 
       <section className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="flex items-center gap-4 mb-12 animate-slide-up">
-            <Clock className="w-8 h-8 text-primary" />
+          <div className="mb-12 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold"></h2>
           </div>
           
