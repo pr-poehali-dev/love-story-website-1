@@ -79,9 +79,7 @@ const Index = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               Всё началось с <span className="text-primary font-semibold">26 марта 2025</span> — и с тех пор каждый день стал особенным.
             </p>
-            <p className="text-lg md:text-xl text-foreground leading-relaxed italic">
-              Кто бы знал, что случайная встреча приведёт к чему-то такому настоящему 💞
-            </p>
+            <p className="text-lg md:text-xl text-foreground leading-relaxed italic">Кто бы знал, что наша встреча приведёт к чему-то такому настоящему 💞</p>
           </Card>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-up">
