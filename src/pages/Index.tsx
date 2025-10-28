@@ -68,7 +68,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="flex items-center gap-4 mb-12 animate-slide-up">
             <Clock className="w-8 h-8 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-bold">С самого начала</h2>
+            <h2 className="text-4xl md:text-5xl font-bold"></h2>
           </div>
           
           <div className="mb-12">
