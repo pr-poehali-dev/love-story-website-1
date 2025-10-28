@@ -160,9 +160,7 @@ const Index = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               За смех, за заботу, за поддержку.
             </p>
-            <p className="text-xl md:text-2xl text-primary font-semibold">
-              За то, что просто ты — моя ❤️
-            </p>
+            <p className="text-xl md:text-2xl text-primary font-semibold">За то, что ты — моя ❤️</p>
           </Card>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12 animate-slide-up">
