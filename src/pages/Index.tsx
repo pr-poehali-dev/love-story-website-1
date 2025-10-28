@@ -1,9 +1,10 @@
-import { Heart, Camera, Sparkles } from "lucide-react";
+import { Heart, Camera, Sparkles, Video } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { FloatingHearts } from "@/components/FloatingHearts";
 import { DaysCounter } from "@/components/DaysCounter";
 import { SecretMessage } from "@/components/SecretMessage";
 import { StarryBackground } from "@/components/StarryBackground";
+import { VideoPlayer } from "@/components/VideoPlayer";
 
 const Index = () => {
   const moments = [
@@ -21,6 +22,15 @@ const Index = () => {
       image: "https://cdn.poehali.dev/projects/94baf9c3-5830-4413-aedd-3bf0178de4c8/files/f5ca2810-c46b-4987-bafa-61d7b7895a6e.jpg",
       title: "Вечер вдвоём",
       description: "Время только для нас"
+    }
+  ];
+
+  const videos = [
+    {
+      src: "",
+      title: "Наше видео",
+      description: "Особенный момент",
+      poster: ""
     }
   ];
 
@@ -142,6 +152,37 @@ const Index = () => {
       <section className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto relative z-10">
           <SecretMessage />
+        </div>
+      </section>
+
+      <section className="py-20 px-4 relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="flex items-center gap-4 mb-12 animate-slide-up">
+            <Video className="w-8 h-8 text-primary" />
+            <h2 className="text-4xl md:text-5xl font-bold">Наши видео</h2>
+          </div>
+          
+          <Card className="bg-card border-border p-8 md:p-12 mb-8 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Живые моменты, которые невозможно передать в фото 🎬
+            </p>
+          </Card>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up">
+            {videos.map((video, index) => (
+              <Card 
+                key={index}
+                className="overflow-hidden bg-transparent border-border/30 hover:border-primary/50 transition-all duration-300"
+              >
+                <VideoPlayer 
+                  src={video.src}
+                  title={video.title}
+                  description={video.description}
+                  poster={video.poster}
+                />
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
