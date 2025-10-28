@@ -11,10 +11,8 @@ export const SecretMessage = () => {
       {!isRevealed ? (
         <div className="animate-fade-in">
           <Lock className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Секретное послание</h3>
-          <p className="text-muted-foreground mb-8 text-lg">
-            Здесь спрятано что-то особенное...
-          </p>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4"></h3>
+          <p className="text-muted-foreground mb-8 text-lg"></p>
           <Button 
             onClick={() => setIsRevealed(true)}
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
