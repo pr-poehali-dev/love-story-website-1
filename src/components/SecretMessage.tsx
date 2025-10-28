@@ -24,9 +24,7 @@ export const SecretMessage = () => {
       ) : (
         <div className="animate-fade-in">
           <Sparkles className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
-            Моей любимой
-          </h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary"></h3>
           <div className="space-y-6 text-lg md:text-xl leading-relaxed">
             <p className="text-foreground italic">
               "Ты знаешь, бывают люди, после встречи с которыми мир становится другим..."
@@ -37,9 +35,7 @@ export const SecretMessage = () => {
             <p className="text-foreground">
               Спасибо, что ты есть. Спасибо за каждый день, за каждую улыбку, за каждый момент рядом.
             </p>
-            <p className="text-2xl md:text-3xl text-primary font-bold mt-8">
-              Я люблю тебя ❤️
-            </p>
+            <p className="text-2xl md:text-3xl text-primary font-bold mt-8">Люблю тебя ❤️</p>
           </div>
         </div>
       )}
