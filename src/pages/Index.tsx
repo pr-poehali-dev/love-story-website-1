@@ -93,7 +93,7 @@ const Index = () => {
           </Card>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-up">
-            {moments.map((moment, index) => (
+            {moments.filter(m => m.type === 'image').map((moment, index) => (
               <Card 
                 key={index}
                 className="group overflow-hidden bg-card border-border hover:border-primary/50 hover:glow-effect transition-all duration-300 cursor-pointer"
