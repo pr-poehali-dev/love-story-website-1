@@ -10,7 +10,7 @@ const Index = () => {
   const moments = [
     {
       type: "image",
-      image: "https://drive.google.com/uc?export=view&id=16qZDhvIt-MCcr_0RTmH09wP9VUm_OQeF",
+      image: "https://cdn.poehali.dev/files/64f761f4-8a8b-4cd5-bdd2-4a919ac2356e.jpg",
       title: "Первая встреча",
       description: "Момент, который изменил всё"
     },
