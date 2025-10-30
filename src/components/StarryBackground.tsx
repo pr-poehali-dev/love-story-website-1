@@ -116,9 +116,9 @@ export const StarryBackground = () => {
         mouseX, mouseY, 0,
         mouseX, mouseY, canvas.width / 2
       );
-      gradient.addColorStop(0, 'rgba(139, 0, 0, 0.05)');
-      gradient.addColorStop(0.5, 'rgba(80, 0, 0, 0.02)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      gradient.addColorStop(0, 'rgba(255, 192, 203, 0.08)');
+      gradient.addColorStop(0.5, 'rgba(255, 228, 225, 0.04)');
+      gradient.addColorStop(1, 'rgba(255, 250, 240, 0)');
       
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
