@@ -38,7 +38,7 @@ export const VideoPlayer = ({ src, title, description, poster }: VideoPlayerProp
   if (embedUrl) {
     const isKinescope = embedUrl.includes('kinescope.io');
     const embedSrc = isKinescope 
-      ? `${embedUrl}?autoplay=1&muted=1&loop=1`
+      ? `${embedUrl}?autoplay=1&muted=1&loop=1&controls=0`
       : `${embedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=${embedUrl.split('/').pop()}`;
     
     return (
@@ -47,7 +47,7 @@ export const VideoPlayer = ({ src, title, description, poster }: VideoPlayerProp
           className="w-full h-full"
           src={embedSrc}
           title={title || "Video"}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
           allowFullScreen
         />
       </div>
