@@ -15,7 +15,7 @@ export const SecretMessage = () => {
           <p className="text-muted-foreground mb-8 text-lg"></p>
           <Button 
             onClick={() => setIsRevealed(true)}
-            className="bg-white hover:bg-white/90 text-black px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/50"
+            className="bg-primary hover:bg-primary/80 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
           >❤️ Открыть ❤️</Button>
         </div>
       ) : (
