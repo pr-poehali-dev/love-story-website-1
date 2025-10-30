@@ -207,7 +207,7 @@ const Index = () => {
       </section>
 
       <section className="py-10 px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="mb-8 animate-fade-in">
             <Sparkles className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
             <h2 className="text-4xl md:text-5xl font-bold mb-8"></h2>
@@ -223,7 +223,7 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-primary font-semibold">За то, что ты — моя ❤️</p>
           </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 animate-slide-up">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 animate-slide-up">
             {moments.slice(-3).map((moment, index) => (
               <div key={index} className="overflow-hidden rounded-lg">
                 <VideoPlayer 
