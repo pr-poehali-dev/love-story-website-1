@@ -33,7 +33,7 @@ export const VideoPlayer = ({ src, title, description, poster }: VideoPlayerProp
         <div className="relative overflow-hidden rounded-lg border border-border/30 hover:border-primary/50 transition-all duration-300 aspect-video">
           <iframe
             className="w-full h-full"
-            src={`${youtubeEmbedUrl}?modestbranding=1&controls=0&showinfo=0&rel=0&iv_load_policy=3`}
+            src={`${youtubeEmbedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=${youtubeEmbedUrl.split('/').pop()}`}
             title={title || "YouTube video"}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
