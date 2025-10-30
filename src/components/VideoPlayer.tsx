@@ -42,23 +42,14 @@ export const VideoPlayer = ({ src, title, description, poster }: VideoPlayerProp
       : `${embedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=${embedUrl.split('/').pop()}`;
     
     return (
-      <div className="relative group">
-        <div className="relative overflow-hidden rounded-lg border border-border/30 hover:border-primary/50 transition-all duration-300 aspect-video">
-          <iframe
-            className="w-full h-full"
-            src={embedSrc}
-            title={title || "Video"}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-        
-        {(title || description) && (
-          <div className="mt-4">
-            {title && <h3 className="text-xl font-bold mb-2">{title}</h3>}
-            {description && <p className="text-muted-foreground">{description}</p>}
-          </div>
-        )}
+      <div className="relative overflow-hidden rounded-lg aspect-video">
+        <iframe
+          className="w-full h-full"
+          src={embedSrc}
+          title={title || "Video"}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
       </div>
     );
   }

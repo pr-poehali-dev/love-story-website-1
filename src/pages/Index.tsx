@@ -178,35 +178,33 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 animate-slide-up">
             {moments.map((moment, index) => (
-              <Card 
-                key={index}
-                className="group overflow-hidden bg-transparent border-border/30 hover:border-primary/50 transition-all duration-300"
-              >
-                {moment.type === "image" ? (
-                  <>
-                    <div className="aspect-video overflow-hidden">
-                      <img 
-                        src={moment.image}
-                        alt={moment.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 animate-parallax"
-                      />
-                    </div>
-                    <div className="p-6 bg-black/30 backdrop-blur-sm">
-                      <h3 className="text-2xl font-bold mb-2">{moment.title}</h3>
-                      <p className="text-muted-foreground">{moment.description}</p>
-                    </div>
-                  </>
-                ) : (
-                  <div className="p-6">
-                    <VideoPlayer 
-                      src={moment.video || ""}
-                      title={moment.title}
-                      description={moment.description}
-                      poster={moment.poster}
+              moment.type === "image" ? (
+                <Card 
+                  key={index}
+                  className="group overflow-hidden bg-transparent border-border/30 hover:border-primary/50 transition-all duration-300"
+                >
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={moment.image}
+                      alt={moment.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 animate-parallax"
                     />
                   </div>
-                )}
-              </Card>
+                  <div className="p-6 bg-black/30 backdrop-blur-sm">
+                    <h3 className="text-2xl font-bold mb-2">{moment.title}</h3>
+                    <p className="text-muted-foreground">{moment.description}</p>
+                  </div>
+                </Card>
+              ) : (
+                <div key={index} className="overflow-hidden rounded-lg">
+                  <VideoPlayer 
+                    src={moment.video || ""}
+                    title={moment.title}
+                    description={moment.description}
+                    poster={moment.poster}
+                  />
+                </div>
+              )
             ))}
           </div>
         </div>
