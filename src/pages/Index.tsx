@@ -57,6 +57,13 @@ const Index = () => {
       poster: "",
       title: "Наши дни",
       description: "Те самые моменты"
+    },
+    {
+      type: "video",
+      video: "https://kinescope.io/pd8nPx1EaXmC1Z4Whw1gL9",
+      poster: "",
+      title: "Особенные моменты",
+      description: "Наши воспоминания"
     }
   ];
 
