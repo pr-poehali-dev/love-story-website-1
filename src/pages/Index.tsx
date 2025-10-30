@@ -208,21 +208,6 @@ const Index = () => {
             </p>
             <p className="text-xl md:text-2xl text-primary font-semibold">За то, что ты — моя ❤️</p>
           </Card>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12 animate-slide-up">
-            {moments.map((moment, index) => (
-              <div 
-                key={index}
-                className="group aspect-square overflow-hidden rounded-lg border border-border/30 hover:border-primary/50 transition-all duration-300"
-              >
-                <img 
-                  src={moment.image}
-                  alt={`Момент ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale hover:grayscale-0 animate-parallax"
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
