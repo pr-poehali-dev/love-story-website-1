@@ -8,33 +8,46 @@ interface VideoPlayerProps {
   poster?: string;
 }
 
-const getYouTubeEmbedUrl = (url: string): string | null => {
-  const patterns = [
+const getVideoEmbedUrl = (url: string): string | null => {
+  // YouTube patterns
+  const youtubePatterns = [
     /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/,
     /youtube\.com\/embed\/([^&\n?#]+)/
   ];
   
-  for (const pattern of patterns) {
+  for (const pattern of youtubePatterns) {
     const match = url.match(pattern);
     if (match) {
       return `https://www.youtube.com/embed/${match[1]}`;
     }
   }
+  
+  // Kinescope pattern
+  const kinescopeMatch = url.match(/kinescope\.io\/([^&\n?#]+)/);
+  if (kinescopeMatch) {
+    return `https://kinescope.io/embed/${kinescopeMatch[1]}`;
+  }
+  
   return null;
 };
 
 export const VideoPlayer = ({ src, title, description, poster }: VideoPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const youtubeEmbedUrl = getYouTubeEmbedUrl(src);
+  const embedUrl = getVideoEmbedUrl(src);
 
-  if (youtubeEmbedUrl) {
+  if (embedUrl) {
+    const isKinescope = embedUrl.includes('kinescope.io');
+    const embedSrc = isKinescope 
+      ? `${embedUrl}?autoplay=1&muted=1&loop=1`
+      : `${embedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=${embedUrl.split('/').pop()}`;
+    
     return (
       <div className="relative group">
         <div className="relative overflow-hidden rounded-lg border border-border/30 hover:border-primary/50 transition-all duration-300 aspect-video">
           <iframe
             className="w-full h-full"
-            src={`${youtubeEmbedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=${youtubeEmbedUrl.split('/').pop()}`}
-            title={title || "YouTube video"}
+            src={embedSrc}
+            title={title || "Video"}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />

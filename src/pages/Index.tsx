@@ -22,7 +22,7 @@ const Index = () => {
     },
     {
       type: "video",
-      video: "https://youtu.be/N-LEOt3DzHA",
+      video: "https://kinescope.io/tEFJhbgPyyN9gGmvinThg4",
       poster: "",
       title: "Наше видео",
       description: "Особенный момент"
