@@ -62,10 +62,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden relative">
-      <div className="fixed inset-0 bg-gradient-to-br from-[#FFF5F0] via-[#FFE8E0] to-[#FFD5D0]" />
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,200,200,0.2),transparent_50%)]" />
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,180,180,0.15),transparent_50%)]" />
-      <div className="fixed inset-0 backdrop-blur-sm opacity-30" />
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-950" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(100,100,150,0.15),transparent_50%)]" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(80,80,120,0.12),transparent_50%)]" />
+      <div className="fixed inset-0 backdrop-blur-2xl opacity-40" />
       <StarryBackground />
       <FloatingHearts />
       
