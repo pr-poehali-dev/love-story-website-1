@@ -56,6 +56,13 @@ const Index = () => {
       description: "Наша история"
     },
     {
+      type: "video",
+      video: "https://kinescope.io/6XsNZVtjqprp3C9kKERoxR",
+      poster: "",
+      title: "С тобой",
+      description: "Каждая секунда бесценна"
+    },
+    {
       type: "image",
       image: "https://cdn.poehali.dev/projects/94baf9c3-5830-4413-aedd-3bf0178de4c8/files/f5ca2810-c46b-4987-bafa-61d7b7895a6e.jpg",
       title: "Вечер вдвоём",
