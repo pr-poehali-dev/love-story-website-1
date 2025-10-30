@@ -143,7 +143,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold">Наши моменты</h2>
           </div>
           
-          <Card className="bg-card border-border p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up glow-effect">
+          <Card className="bg-transparent border-border/30 p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               Фото и видео — как кадры из нашего фильма.
             </p>
