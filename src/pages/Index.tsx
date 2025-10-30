@@ -29,12 +29,7 @@ const Index = () => {
       title: "Вместе",
       description: "Каждый день с тобой — подарок"
     },
-    {
-      type: "image",
-      image: "https://i.ibb.co/Gfr50Kqs/image.gif",
-      title: "Наши воспоминания",
-      description: "Моменты, которые навсегда"
-    },
+
     {
       type: "video",
       video: "https://kinescope.io/sLVcBtbKEtXQET1nbHyAnB",
