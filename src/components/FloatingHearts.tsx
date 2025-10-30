@@ -36,11 +36,11 @@ export const FloatingHearts = () => {
           key={heart.id}
           className="fixed pointer-events-none z-50 animate-float-up"
           style={{
-            left: heart.x - 64,
-            top: heart.y - 64,
+            left: heart.x - 12,
+            top: heart.y - 12,
           }}
         >
-          <Heart className="w-32 h-32 text-primary drop-shadow-2xl" fill="currentColor" />
+          <Heart className="w-6 h-6 text-primary" fill="currentColor" />
         </div>
       ))}
     </>
