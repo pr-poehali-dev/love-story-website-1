@@ -69,7 +69,7 @@ const Index = () => {
       <StarryBackground />
       <FloatingHearts />
       
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-12">
         
         <div className="relative z-10 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="mb-12 relative">
@@ -100,13 +100,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-10 px-4 relative z-10">
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="mb-12 animate-slide-up">
+          <div className="mb-8 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold"></h2>
           </div>
           
-          <div className="mb-12">
+          <div className="mb-8">
             <DaysCounter />
           </div>
           
@@ -136,9 +136,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-10 px-4 relative z-10">
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="flex items-center gap-4 mb-12 animate-slide-up">
+          <div className="flex items-center gap-4 mb-8 animate-slide-up">
             <Camera className="w-8 h-8 text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold">Наши моменты</h2>
           </div>
@@ -186,13 +186,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-10 px-4 relative z-10">
         <div className="max-w-4xl mx-auto relative z-10">
           <SecretMessage />
         </div>
       </section>
 
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-10 px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="mb-8 animate-fade-in">
             <Sparkles className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
@@ -211,7 +211,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-10 px-4 relative z-10">
         <div className="max-w-2xl mx-auto text-center animate-fade-in">
           <div className="glow-effect rounded-full p-4 inline-block mb-8">
             <Heart className="w-12 h-12 text-primary animate-pulse" fill="currentColor" />
