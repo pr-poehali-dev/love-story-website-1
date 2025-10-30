@@ -16,10 +16,7 @@ export const SecretMessage = () => {
           <Button 
             onClick={() => setIsRevealed(true)}
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
-          >
-            <Unlock className="w-5 h-5 mr-2" />
-            Открыть письмо
-          </Button>
+          >❤️ Открыть ❤️</Button>
         </div>
       ) : (
         <div className="animate-fade-in">
