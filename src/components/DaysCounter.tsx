@@ -28,13 +28,13 @@ export const DaysCounter = () => {
   return (
     <Card className="bg-transparent border-border/20 p-8 md:p-12 text-center hover:border-border/40 transition-all duration-500">
       <div className="flex items-center justify-center gap-3 mb-6">
-        <Calendar className="w-8 h-8 text-foreground/50" />
+        <Calendar className="w-8 h-8 text-primary/70" />
         <h3 className="text-2xl md:text-3xl font-bold text-foreground/90">Вместе уже</h3>
       </div>
       
       <div className="flex items-center justify-center gap-4 mb-4">
         <div className="text-center">
-          <div className="text-5xl md:text-7xl font-bold text-foreground/80 mb-2">
+          <div className="text-5xl md:text-7xl font-bold text-primary mb-2">
             {days}
           </div>
           <div className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
@@ -43,10 +43,10 @@ export const DaysCounter = () => {
           </div>
         </div>
         
-        <Heart className="w-8 h-8 text-foreground/50" fill="currentColor" />
+        <Heart className="w-8 h-8 text-primary" fill="currentColor" />
         
         <div className="text-center">
-          <div className="text-5xl md:text-7xl font-bold text-foreground/70 mb-2">
+          <div className="text-5xl md:text-7xl font-bold text-primary mb-2">
             {hours}
           </div>
           <div className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
