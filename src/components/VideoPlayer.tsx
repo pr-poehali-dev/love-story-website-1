@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play, Pause } from "lucide-react";
+import { Play } from "lucide-react";
 
 interface VideoPlayerProps {
   src: string;
@@ -8,8 +8,47 @@ interface VideoPlayerProps {
   poster?: string;
 }
 
+const getYouTubeEmbedUrl = (url: string): string | null => {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/,
+    /youtube\.com\/embed\/([^&\n?#]+)/
+  ];
+  
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return `https://www.youtube.com/embed/${match[1]}`;
+    }
+  }
+  return null;
+};
+
 export const VideoPlayer = ({ src, title, description, poster }: VideoPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const youtubeEmbedUrl = getYouTubeEmbedUrl(src);
+
+  if (youtubeEmbedUrl) {
+    return (
+      <div className="relative group">
+        <div className="relative overflow-hidden rounded-lg border border-border/30 hover:border-primary/50 transition-all duration-300 aspect-video">
+          <iframe
+            className="w-full h-full"
+            src={youtubeEmbedUrl}
+            title={title || "YouTube video"}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        
+        {(title || description) && (
+          <div className="mt-4">
+            {title && <h3 className="text-xl font-bold mb-2">{title}</h3>}
+            {description && <p className="text-muted-foreground">{description}</p>}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   const handlePlayPause = (e: React.MouseEvent<HTMLVideoElement>) => {
     const video = e.currentTarget;

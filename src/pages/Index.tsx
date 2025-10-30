@@ -22,7 +22,7 @@ const Index = () => {
     },
     {
       type: "video",
-      video: "https://screenapp.io/app/app/v/WPKmXCuxlr",
+      video: "https://youtu.be/N-LEOt3DzHA",
       poster: "",
       title: "Наше видео",
       description: "Особенный момент"
