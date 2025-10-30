@@ -222,6 +222,19 @@ const Index = () => {
             </p>
             <p className="text-xl md:text-2xl text-primary font-semibold">За то, что ты — моя ❤️</p>
           </Card>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 animate-slide-up">
+            {moments.slice(-3).map((moment, index) => (
+              <div key={index} className="overflow-hidden rounded-lg">
+                <VideoPlayer 
+                  src={moment.video || ""}
+                  title={moment.title}
+                  description={moment.description}
+                  poster={moment.poster}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
