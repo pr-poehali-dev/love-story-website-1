@@ -76,8 +76,8 @@ export const StarryBackground = () => {
       hearts.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 15 + 10,
-        opacity: Math.random() * 0.3 + 0.1,
+        size: Math.random() * 40 + 30,
+        opacity: Math.random() * 0.4 + 0.2,
         speed: Math.random() * 0.5 + 0.2,
         angle: Math.random() * Math.PI * 2,
         rotationSpeed: (Math.random() - 0.5) * 0.02,
