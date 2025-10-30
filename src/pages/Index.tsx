@@ -167,7 +167,7 @@ const Index = () => {
           </Card>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 animate-slide-up">
-            {moments.map((moment, index) => (
+            {moments.slice(0, -3).map((moment, index) => (
               moment.type === "image" ? (
                 <Card 
                   key={index}
