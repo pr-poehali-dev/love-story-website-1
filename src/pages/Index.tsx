@@ -30,9 +30,8 @@ const Index = () => {
       description: "Каждый день с тобой — подарок"
     },
     {
-      type: "video",
-      video: "https://kinescope.io/ojfqWDg5FVTZiAV8pmFs8G",
-      poster: "",
+      type: "image",
+      image: "https://i.ibb.co/Gfr50Kqs/image.gif",
       title: "Наши воспоминания",
       description: "Моменты, которые навсегда"
     },
