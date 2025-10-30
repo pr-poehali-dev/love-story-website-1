@@ -7,7 +7,7 @@ export const SecretMessage = () => {
   const [isRevealed, setIsRevealed] = useState(false);
 
   return (
-    <Card className="bg-gradient-to-br from-primary/10 to-background border-primary/30 p-8 md:p-12 text-center hover:border-primary/50 transition-all duration-500">
+    <Card className="bg-transparent border-border/30 p-8 md:p-12 text-center hover:border-primary/50 transition-all duration-500">
       {!isRevealed ? (
         <div className="animate-fade-in">
           <Lock className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
