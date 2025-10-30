@@ -9,12 +9,6 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 const Index = () => {
   const moments = [
     {
-      type: "image",
-      image: "https://cdn.poehali.dev/projects/94baf9c3-5830-4413-aedd-3bf0178de4c8/files/ca9a68cf-ff24-4b79-994d-7160f20a9b00.jpg",
-      title: "Наш смех",
-      description: "Когда счастье не спрятать"
-    },
-    {
       type: "video",
       video: "https://kinescope.io/tEFJhbgPyyN9gGmvinThg4",
       poster: "",
