@@ -207,13 +207,13 @@ const Index = () => {
       </section>
 
       <section className="py-10 px-4 relative z-10">
-        <div className="max-w-6xl mx-auto text-center relative z-10">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="mb-8 animate-fade-in">
             <Sparkles className="w-12 h-12 text-primary mx-auto mb-6 animate-pulse" />
             <h2 className="text-4xl md:text-5xl font-bold mb-8"></h2>
           </div>
           
-          <Card className="bg-transparent border-border/30 p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up backdrop-blur-sm">
+          <Card className="bg-transparent border-border/30 p-8 md:p-12 hover:border-primary/50 transition-all duration-300 animate-slide-up backdrop-blur-sm max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-6">
               Спасибо, что ты рядом.
             </p>
@@ -223,9 +223,9 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-primary font-semibold">За то, что ты — моя ❤️</p>
           </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 animate-slide-up">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16 animate-slide-up">
             {moments.slice(-3).map((moment, index) => (
-              <div key={index} className="overflow-hidden rounded-lg">
+              <div key={index} className="overflow-hidden rounded-lg scale-110">
                 <VideoPlayer 
                   src={moment.video || ""}
                   title={moment.title}
